@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>ES6</title>
+    </head>
+    <body>
+
+
+        <script type="text/javascript">
+            //ES6
+                //let 
+                //const
+                //Arrow functions
+                //Array Destructuring
+                //Object Destructuring
+                //class
+                
+                var x = 10;
+               
+                { 
+                     const x = 2;
+                     console.log(x);
+                }
+               
+                //console.log(x);             
+             function tellAge(name){
+                 console.log("Welcome " + name);
+             }
+              
+              
+              tellName = (name, age) => console.log("welcome " + name + " your age is " + age);
+             
+               
+              tellName("Bright","30");
+
+
+              var friends = ["John", "Polina", "Bisi", "Micheal"];
+
+              let [ j, p, b, m] = friends;
+
+              console.log("My friends are " + j + "," + p + "," + b + "and" + m);
+             
+              //Object D.
+              var human = {
+                  skinColor: "brown",
+                  eye: 2,
+                  legs: 2,
+                  nose: 1
+              }
+
+            const { skinColor, eye, legs, nose } = human;
+   
+            console.log("I love my " + skincolor + " skin color");
+        </script>
+    </body>
+</html>

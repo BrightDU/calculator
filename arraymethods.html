@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <title>JS ARRAY</title>
+        <style>
+        
+            #dashboard {
+                background-color: yellow;
+                display: inline-block;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                border: 2px dashed blue;
+                width: 100%;
+
+            }
+
+            body {
+                background-color: black;
+            }
+
+            #center {
+                background-color: brown;
+                padding:70px;
+                margin: 150px;
+            }
+        </style>
+    </head>
+    <body>
+
+         <center id="center">
+            <div id="dashboard"></div>
+            <br>
+            <input id="txt" type="text"><br>
+            <button onClick="pusher()">ADD</button>
+            <button id="btn1" onClick="popper()">REMOVE</button>
+            <button id="btn1" onClick="shifter()">SHIFT</button>
+         </center>  
+       
+
+        <script type="text/javascript">
+
+            
+                var friends = ["Caleb","Gideon","Blessing","Tosin","Mercy"];
+
+                var nameHolder = document.getElementById("dashboard");
+
+                for( var i = 0; i < friends.length; i++){
+                    nameHolder.innerHTML += friends[i];
+                }
+
+                //removes the last element from the array
+                function popper(){
+                    document.getElementById("dashboard").innerHTML = friends.pop();
+                    document.getElementById("dashboard").innerHTML = friends;
+                }
+
+                //removes the first element from the array 
+                function shifter(){
+                    document.getElementById("dashboard").innerHTML = friends.shift();
+                    document.getElementById("dashboard").innerHTML = friends;
+                }
+
+                 //adds an element to end of the array
+                 function pusher(){       
+                    var newElement = document.getElementById("txt").value;
+                    var pushed = friends.push(newElement);
+                    document.getElementById("dashboard").innerHTML = pushed;
+                    document.getElementById("dashboard").innerHTML = friends;
+                }
+        </script>
+    </body>
+</html>
